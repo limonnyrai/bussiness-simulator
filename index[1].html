@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Business Empire — Симулятор бизнеса</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Business Empire</div>
+    <div class="top-actions">
+      <span id="dayLabel">День 1</span>
+      <button id="resetBtn" class="ghost">Сбросить</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">БИЗНЕС-СИМУЛЯТОР</p>
+        <h1>Построй бизнес<br>с нуля.</h1>
+        <p class="sub">Начни со 100 000 ₽, выбирай направление, развивай компанию и стань самым богатым предпринимателем.</p>
+      </div>
+      <div class="hero-card">
+        <span>КАПИТАЛ</span>
+        <strong id="heroMoney">100 000 ₽</strong>
+        <small>+ прибыль после каждого рабочего дня</small>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>💰 Деньги</span><b id="money">100 000 ₽</b></div>
+      <div class="stat"><span>📈 Доход / день</span><b id="income">0 ₽</b></div>
+      <div class="stat"><span>⭐ Репутация</span><b id="rep">10</b></div>
+      <div class="stat"><span>👥 Сотрудники</span><b id="employees">0</b></div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <div><h2>Твой бизнес</h2><p>Выбери отрасль и начни развитие.</p></div>
+          <button id="workBtn" class="primary">Рабочий день</button>
+        </div>
+        <div id="businesses" class="business-list"></div>
+      </section>
+
+      <aside class="panel">
+        <h2>Улучшения</h2>
+        <p>Инвестируй прибыль в компанию.</p>
+        <div id="upgrades"></div>
+      </aside>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Сотрудники</h2><p>Каждый сотрудник увеличивает ежедневную прибыль.</p></div>
+        <button id="hireBtn" class="secondary">Нанять сотрудника</button>
+      </div>
+      <div id="employeeInfo" class="employee-box"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Журнал</h2><p>Последние события компании.</p></div>
+      </div>
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
